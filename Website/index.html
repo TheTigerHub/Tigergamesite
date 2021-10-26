@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paralax</title>
+        <link rel="stylesheet" href="styles/paralax.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class = "active">Home</a></li>
+                <li><a href="subpages/games.html">Games</a></li>
+                <li><a href="subpages/works.html">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="images/stars.png" id="stars">
+            <img src="images/moon.png" id="moon">
+            <img src="images/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="images/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec">
+            <h2>About me</h2>
+            <p>
+                Tiger is the best at everything, like eating, playing videogames, and watching youtube. <br><br>
+
+                I have done coding since I was 6 and did circuits when I was 5 and am now doing web design and python <br><br>
+                
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel. In metus vulputate eu scelerisque felis imperdiet. Cursus turpis massa tincidunt dui ut ornare lectus. Vulputate odio ut enim blandit volutpat maecenas. Tincidunt dui ut ornare lectus sit. Dui id ornare arcu odio ut sem nulla pharetra. In hendrerit gravida rutrum quisque. Etiam dignissim diam quis enim lobortis scelerisque fermentum. Dui sapien eget mi proin sed libero enim sed faucibus. Sem et tortor consequat id. Libero volutpat sed cras ornare arcu dui vivamus arcu. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Vitae semper quis lectus nulla at. Ultricies integer quis auctor elit sed vulputate mi sit amet. Risus ultricies tristique nulla aliquet enim tortor at auctor urna.
+                Ac ut consequat semper viverra nam libero justo laoreet. Eget nunc lobortis mattis aliquam faucibus. Amet consectetur adipiscing elit ut aliquam purus sit amet luctus. Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Facilisi morbi tempus iaculis urna id. At imperdiet dui accumsan sit. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Integer vitae justo eget magna fermentum iaculis eu non. Feugiat in fermentum posuere urna nec tincidunt praesent semper. Ullamcorper a lacus vestibulum sed arcu non odio euismod. Est ante in nibh mauris cursus mattis. Tortor consequat id porta nibh venenatis cras sed felis eget. Fermentum leo vel orci porta. Tortor at auctor urna nunc id cursus metus aliquam. Laoreet suspendisse interdum consectetur libero id faucibus nisl.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars')
+            let moon = document.getElementById('moon')
+            let mountains_behind = document.getElementById('mountains_behind')
+            let text = document.getElementById('text')
+            let btn = document.getElementById('btn')
+            let mountains_front = document.getElementById('mountains_front')
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
